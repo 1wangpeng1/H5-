@@ -1,0 +1,1 @@
+<import src="/pages/myIfoPages/editBankCard.vue.wxml" /><template is="4662bd44" data="{{ ...$root['0'], $root }}"/>

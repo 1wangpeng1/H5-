@@ -1,0 +1,24 @@
+<template name="368213f2">
+  <view class="_div data-v-6ff00eec addressBg">
+    <view class="_div data-v-6ff00eec shoppingMsg">
+      <van-cell-group class="_van-cell-group data-v-6ff00eec">
+        <van-field class="_van-field data-v-6ff00eec shoppingName" value="{{addressMsg.name}}" placeholder="收货人"></van-field>
+        <van-field class="_van-field data-v-6ff00eec shoppingName" type="number" value="{{addressMsg.tel}}" placeholder="联系电话"></van-field>
+        <view class="_div data-v-6ff00eec addressMsgCity" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+          <van-field class="_van-field data-v-6ff00eec shoppingName" disabled value="{{addressMsg.city}}" placeholder="所在地区"></van-field>
+          <view class="_div data-v-6ff00eec cityChangeBtn">请选择 ></view>
+        </view>
+        <van-field class="_van-field data-v-6ff00eec shoppingDetail" value="{{addressMsg.detail}}" type="textarea" placeholder="请填写详细地址"></van-field>
+      </van-cell-group>
+    </view>
+    <view class="_div data-v-6ff00eec addressTips">
+      <view class="_div data-v-6ff00eec addressDefault">
+        <van-checkbox value="{{addressMsg.default}}" bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-checkbox data-v-6ff00eec">设为默认地址</van-checkbox>
+      </view>
+      <view class="_div data-v-6ff00eec saveBtn" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">保存</view>
+      <van-popup show="{{areaCity}}" position="bottom" bindclose="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-popup data-v-6ff00eec">
+        <van-area area-list="{{areaList}}" value="110101" bindconfirm="handleProxy" bindcancel="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-area data-v-6ff00eec"></van-area>
+      </van-popup>
+    </view>
+  </view>
+</template>

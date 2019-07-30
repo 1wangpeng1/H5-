@@ -1,0 +1,102 @@
+@import "../common/vendor.wxss";
+
+.indexBanner.data-v-76f5c7ef {
+  position: relative;
+  width: 750rpx;
+  height: 480rpx;
+}
+.indexBanner .indexBannerBg.data-v-76f5c7ef {
+  width: 100%;
+  height: 304rpx;
+  background: #AEB6AB;
+}
+.indexBanner ._img.data-v-76f5c7ef {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 726rpx;
+  height: 100%;
+  margin: 0 12rpx;
+}
+.box.data-v-76f5c7ef {
+  width: 750rpx;
+  height: 480rpx;
+}
+.indexTab.data-v-76f5c7ef {
+  width: 100%;
+  height: 102rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+}
+.indexTab ._img.data-v-76f5c7ef {
+  width: 120rpx;
+  height: 42rpx;
+}
+.indexTab .tabOn.data-v-76f5c7ef {
+  margin-top: 20rpx;
+}
+.indexTab .tabHeight.data-v-76f5c7ef {
+  width: 120rpx;
+  height: 28rpx;
+}
+.indexTab .tabOneHot.data-v-76f5c7ef {
+  width: 34rpx;
+  height: 38rpx;
+  padding-right: 8rpx;
+}
+.fix.data-v-76f5c7ef {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  animation: move 0.2s linear;
+}
+.goodsListDiv.data-v-76f5c7ef {
+  margin-bottom: 98rpx;
+}
+.goodsListDiv .loadingFinish.data-v-76f5c7ef {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+}
+.fixedAuthorize.data-v-76f5c7ef {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100vh;
+  z-index: 1000;
+  background: #fff;
+}
+.header.data-v-76f5c7ef {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+.header ._img.data-v-76f5c7ef {
+  width: 200rpx;
+  height: 200rpx;
+}
+.content.data-v-76f5c7ef {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+.content ._span.data-v-76f5c7ef {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+.bottom.data-v-76f5c7ef {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}

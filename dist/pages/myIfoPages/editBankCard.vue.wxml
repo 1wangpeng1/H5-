@@ -1,0 +1,15 @@
+<template name="4662bd44">
+  <view class="_div data-v-5dbff4b8 pagesBg">
+    <view class="_div data-v-5dbff4b8 bankCardCell">
+      <van-cell-group class="_van-cell-group data-v-5dbff4b8">
+        <van-field value="{{bankCardMsg.name}}" label="持卡人：" title-width="65px" bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-field data-v-5dbff4b8"></van-field>
+        <van-field value="{{bankCardMsg.cardId}}" label="身份证号：" type="idcard" title-width="80px" bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-field data-v-5dbff4b8"></van-field>
+        <van-field value="{{bankCardMsg.bankId}}" type="number" label="银行卡号：" title-width="80px" bindchange="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-field data-v-5dbff4b8"></van-field>
+        <van-field value="{{bankCardMsg.tel}}" label="手机号：" title-width="65px" type="number" placeholder="（预留银行的手机号码）" placeholder-style="color: #999;font-size=16px;height: 50px;line-height: 50px;" bindchange="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-field data-v-5dbff4b8"></van-field>
+      </van-cell-group>
+      <view class="_div data-v-5dbff4b8 addBankTips">提示：该银行卡将用于您的账户提现，请填写正确信息</view>
+    </view>
+    <view class="_div data-v-5dbff4b8 addBankCardBtn" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">确认添加</view>
+    <van-toast id="van-toast" class="_van-toast data-v-5dbff4b8"></van-toast>
+  </view>
+</template>

@@ -1,0 +1,44 @@
+<template name="62673634">
+  <view class="_div data-v-1af1ad7a pageBg">
+    <view class="_div data-v-1af1ad7a topGap"></view>
+    <view wx:if="{{isBankCard}}" class="_div data-v-1af1ad7a addBankCard" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}"><label class="_span data-v-1af1ad7a plus">+</label>
+      <view class="_div data-v-1af1ad7a addBankCardRight"><label class="_span data-v-1af1ad7a">添加银行卡</label>
+        <van-icon class="_van-icon data-v-1af1ad7a arrow" name="arrow" color="#8E8E8E" size="15px"></van-icon>
+      </view>
+    </view>
+    <view wx:else class="_div data-v-1af1ad7a bankCardMsg">
+      <view class="_div data-v-1af1ad7a bankMsg" style=" {{('background-image:' + ('url(' + bankMsg.cardBg + ')') + ';')}}">
+        <view class="_div data-v-1af1ad7a logoBg">
+          <image src="{{bankMsg.logo}}" class="_img data-v-1af1ad7a"></image>
+        </view>
+        <view class="_div data-v-1af1ad7a">
+          <view class="_div data-v-1af1ad7a bankName">{{bankMsg.bankName}}</view>
+          <view class="_div data-v-1af1ad7a bankType">{{bankMsg.bankType}}</view>
+          <view class="_div data-v-1af1ad7a cardNo">**** **** **** {{bankMsg.afterCardNo}}</view>
+        </view>
+        <image class="_img data-v-1af1ad7a delectBank" bindtap="handleProxy" src="/static/images/delect.png" data-eventid="{{'0'}}" data-comkey="{{$k}}"></image>
+      </view>
+      <view class="_div data-v-1af1ad7a addBankCard" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}"><label class="_span data-v-1af1ad7a plus">
+          <image src="/static/images/changeBank.png" class="_img data-v-1af1ad7a"></image>
+        </label>
+        <view class="_div data-v-1af1ad7a addBankCardRight"><label class="_span data-v-1af1ad7a">更换银行卡</label>
+          <van-icon class="_van-icon data-v-1af1ad7a arrow" name="arrow" color="#8E8E8E" size="15px"></van-icon>
+        </view>
+      </view>
+    </view>
+    <van-popup z-index="1000" show="{{delectShow}}" close-on-click-overlay="false" close="{{onClose}}" class="_van-popup data-v-1af1ad7a">
+      <view class="_div data-v-1af1ad7a delectPopup">
+        <view class="_div data-v-1af1ad7a delectTitle">
+          <image src="/static/images/warn.png" class="_img data-v-1af1ad7a"></image> <label class="_span data-v-1af1ad7a">确定要删除银行卡？</label>
+        </view>
+        <view class="_div data-v-1af1ad7a delectContent">删除银行卡后您将无法提现哦！</view>
+        <view class="_div data-v-1af1ad7a delectBtn">
+          <view class="_div data-v-1af1ad7a delectLeftBtn" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">删除银行卡</view>
+          <view class="_div data-v-1af1ad7a delectRightBtn" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">更换银行卡</view>
+        </view>
+        <image class="_img data-v-1af1ad7a closeDelect" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <van-toast id="van-toast" class="_van-toast data-v-1af1ad7a"></van-toast>
+  </view>
+</template>

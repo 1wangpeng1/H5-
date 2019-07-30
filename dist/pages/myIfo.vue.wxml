@@ -1,0 +1,153 @@
+<import src="/components/myTabbar.vue.wxml" /><template name="2cc7f4e0">
+  <view class="_div data-v-a8bb927a">
+    <view class="_div data-v-a8bb927a myifoMsg">
+      <view class="_div data-v-a8bb927a myifoAvatar">
+        <view class="_div data-v-a8bb927a myifoAvatarMsg">
+          <image src="{{userInfo.avatarUrl}}" class="_img data-v-a8bb927a"></image>
+          <view class="_div data-v-a8bb927a">{{userInfo.nickName}}</view>
+        </view>
+        <navigator url="/pages/myIfoPages/myifoNews" hover-class="none" class="_navigator data-v-a8bb927a myifoNews">
+          <van-icon name="chat-o" class="_van-icon data-v-a8bb927a #543E3E" size="40rpx" info="{{newsNum}}"></van-icon>
+        </navigator>
+      </view>
+      <view class="_div data-v-a8bb927a myifoAccount">
+        <view class="_div data-v-a8bb927a myifoAccountDiv">
+          <view class="_div data-v-a8bb927a myifoAccountTitle">
+            <view class="_div data-v-a8bb927a">账户余额</view>
+            <view class="_div data-v-a8bb927a"><label class="_span data-v-a8bb927a accountMoneyNum">￥{{userMsg.money}}</label> <label class="_span data-v-a8bb927a accountMoneyDetail" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">明细</label></view>
+            <view class="_div data-v-a8bb927a accountMoneyTixian" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">去提现 ></view>
+          </view>
+          <view class="_div data-v-a8bb927a shopAccount">
+            <view class="_div data-v-a8bb927a">
+              <image class="_img data-v-a8bb927a accountImg1" src="/static/images/accountImg1.png"></image> <label class="_span data-v-a8bb927a">小店销售额：￥{{userMsg.storeSalesMoney}}</label>
+            </view>
+            <view class="_div data-v-a8bb927a">
+              <image class="_img data-v-a8bb927a accountImg2" src="/static/images/accountImg2.png"></image> <label class="_span data-v-a8bb927a">小店的利润：￥{{userMsg.storeProfit}}</label>
+            </view>
+          </view>
+          <view class="_div data-v-a8bb927a friendShopAccount">
+            <view class="_div data-v-a8bb927a">
+              <image class="_img data-v-a8bb927a accountImg1" src="/static/images/accountImg1.png"></image> <label class="_span data-v-a8bb927a">朋友的店销售额：￥{{userMsg.secondSalesMoney}}</label>
+            </view>
+            <view class="_div data-v-a8bb927a">
+              <image class="_img data-v-a8bb927a accountImg2" src="/static/images/accountImg2.png"></image> <label class="_span data-v-a8bb927a">朋友的店销售奖励利润：￥{{userMsg.secondRoyalty}}</label>
+            </view>
+          </view>
+          <view class="_div data-v-a8bb927a inviteReward">
+            <view class="_div data-v-a8bb927a">邀请奖励：<label class="_span data-v-a8bb927a rewardNum">￥{{userMsg.recommendRoyalty}}</label></view>
+            <view class="_div data-v-a8bb927a rewardRule" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">规则</view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{userMsg.isStore === 1}}" class="_div data-v-a8bb927a Orders shopOrders">
+        <view class="_div data-v-a8bb927a shopOrdersTitle">
+          <van-cell title="店铺订单" is-link url="/pages/myIfoPages/shopOrders?status=5" value="全部订单" class="_van-cell data-v-a8bb927a"></van-cell>
+        </view>
+        <van-row class="_van-row data-v-a8bb927a shopOrdersClassify">
+          <van-col span="6" class="_van-col data-v-a8bb927a shopOrdersClassifyLi">
+            <navigator url="/pages/myIfoPages/shopOrders?status=1" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitPay.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">待付款</view>
+            </navigator>
+          </van-col>
+          <van-col span="6" class="_van-col data-v-a8bb927a">
+            <navigator url="/pages/myIfoPages/shopOrders?status=2" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitSent.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">待发货</view>
+            </navigator>
+          </van-col>
+          <van-col span="6" class="_van-col data-v-a8bb927a">
+            <navigator url="/pages/myIfoPages/shopOrders?status=3" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitCollect.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">待收货</view>
+            </navigator>
+          </van-col>
+          <van-col span="6" class="_van-col data-v-a8bb927a">
+            <navigator url="/pages/myIfoPages/shopOrders?status=4" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitFinish.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">已完成</view>
+            </navigator>
+          </van-col>
+        </van-row>
+      </view>
+      <view class="_div data-v-a8bb927a Orders myifoOrders">
+        <view class="_div data-v-a8bb927a shopOrdersTitle">
+          <van-cell title="我的订单" is-link url="/pages/myIfoPages/myOrders?status=5" value="全部订单" class="_van-cell data-v-a8bb927a"></van-cell>
+        </view>
+        <van-row class="_van-row data-v-a8bb927a shopOrdersClassify">
+          <van-col span="6" class="_van-col data-v-a8bb927a shopOrdersClassifyLi">
+            <navigator url="/pages/myIfoPages/myOrders?status=1" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitPay.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">待付款</view>
+            </navigator>
+          </van-col>
+          <van-col span="6" class="_van-col data-v-a8bb927a">
+            <navigator url="/pages/myIfoPages/myOrders?status=2" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitSent.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">待发货</view>
+            </navigator>
+          </van-col>
+          <van-col span="6" class="_van-col data-v-a8bb927a">
+            <navigator url="/pages/myIfoPages/myOrders?status=3" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitCollect.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">待收货</view>
+            </navigator>
+          </van-col>
+          <van-col span="6" class="_van-col data-v-a8bb927a">
+            <navigator url="/pages/myIfoPages/myOrders?status=4" hover-class="none" class="_navigator data-v-a8bb927a">
+              <image src="/static/images/waitFinish.png" class="_img data-v-a8bb927a"></image>
+              <view class="_div data-v-a8bb927a">已完成</view>
+            </navigator>
+          </van-col>
+        </van-row>
+      </view>
+      <view class="_div data-v-a8bb927a myifoSet">
+        <navigator url="/pages/myIfoPages/bankCard" hover-class="none" class="_navigator data-v-a8bb927a">
+          <van-cell title="银行卡" class="_van-cell data-v-a8bb927a">
+            <van-icon slot="right-icon" class="_van-icon data-v-a8bb927a custom-icon"></van-icon>
+            <view slot="right-icon" class="_div data-v-a8bb927a">
+              <image class="_img data-v-a8bb927a cellImg0" src="/static/images/bankCard.png"></image>
+            </view>
+          </van-cell>
+        </navigator>
+        <van-cell title="邀请好友" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-cell data-v-a8bb927a">
+          <van-icon slot="right-icon" class="_van-icon data-v-a8bb927a custom-icon"></van-icon>
+          <view slot="right-icon" class="_div data-v-a8bb927a">
+            <image class="_img data-v-a8bb927a cellImg1" src="/static/images/invite.png"></image>
+          </view>
+        </van-cell>
+        <navigator url="/pages/myIfoPages/addressList" hover-class="none" class="_navigator data-v-a8bb927a">
+          <van-cell title="收货地址管理" class="_van-cell data-v-a8bb927a">
+            <van-icon slot="right-icon" class="_van-icon data-v-a8bb927a custom-icon"></van-icon>
+            <view slot="right-icon" class="_div data-v-a8bb927a">
+              <image class="_img data-v-a8bb927a cellImg2" src="/static/images/addressManage.png"></image>
+            </view>
+          </van-cell>
+        </navigator>
+      </view>
+    </view>
+    <view style="width: 100%; height: 98rpx;" class="_div data-v-a8bb927a"></view>
+    <van-popup z-index="1000" show="{{inviteShow}}" close-on-click-overlay="false" close="{{onClose}}" class="_van-popup data-v-a8bb927a">
+      <view class="_div data-v-a8bb927a delectPopup">
+        <view class="_div data-v-a8bb927a delectTitle">
+          <image src="/static/images/smallWarn.png" class="_img data-v-a8bb927a"></image> <label class="_span data-v-a8bb927a">邀请规则</label>
+        </view>
+        <view class="_div data-v-a8bb927a delectContent">通过你分享的小程序/二维码进入花样并注册开店的店铺，自动成为你的好友店铺。（每个店铺限制有10个好友店铺）好友店铺销售额的5%，将作为你的提成。好友店铺每销售100元，奖励一级店铺5元。</view>
+        <view class="_div data-v-a8bb927a delectBtn">
+          <image src="/static/images/invitefriend.png" class="_img data-v-a8bb927a"></image>
+        </view>
+        <image class="_img data-v-a8bb927a closeDelect" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <van-popup z-index="1000" show="{{friendShow}}" close-on-click-overlay="false" close="{{friendClose}}" class="_van-popup data-v-a8bb927a">
+      <view class="_div data-v-a8bb927a friendPopup delectPopup">
+        <view class="_div data-v-a8bb927a delectTitle"><label class="_span data-v-a8bb927a">成功邀请好友注册店铺</label></view>
+        <view class="_div data-v-a8bb927a delectContent">你会获得好友店铺销售额5%的奖励</view>
+        <view class="_div data-v-a8bb927a delectBtn">
+          <image src="/static/images/invitefriend.png" class="_img data-v-a8bb927a"></image>
+        </view>
+        <image class="_img data-v-a8bb927a closeDelect" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup> <template data="{{...$root[$kk+'21'], $root}}" is="31cc239c"></template>
+  </view>
+</template>

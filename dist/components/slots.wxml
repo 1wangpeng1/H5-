@@ -1,0 +1,5 @@
+<import src="/components/goodsList.vue.wxml" />
+<import src="/components/myTabbar.vue.wxml" />
+<import src="/components/myTabbar.vue.wxml" />
+<import src="/components/goodsList.vue.wxml" />
+<import src="/components/orderList.vue.wxml" />

@@ -1,0 +1,12 @@
+<template name="6fd5a01a">
+  <view class="_div data-v-ad78c9d8">
+    <view class="_div data-v-ad78c9d8 addressDetailLi" wx:key="index" key="{{index}}" wx:for="{{addressList}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-ad78c9d8 addressDetailMsg">
+        <view class="_div data-v-ad78c9d8"><label class="_span data-v-ad78c9d8 addressName">{{item.name}}</label> <label class="_span data-v-ad78c9d8 addressTel">{{item.tel}}</label></view>
+        <view class="_div data-v-ad78c9d8"><label class="_span data-v-ad78c9d8 addressDefault" wx:if="{{item.type === 2}}">默认</label> <label class="_span data-v-ad78c9d8 addressDetail">{{item.addressDetail}}</label></view>
+      </view>
+      <view class="_div data-v-ad78c9d8 editAddress">编辑</view>
+    </view>
+    <navigator url="/pages/myIfoPages/editAddress" hover-class="none" class="_navigator data-v-ad78c9d8 addAddress"><label class="_span data-v-ad78c9d8 plus">+</label> 添加地址 </navigator>
+  </view>
+</template>

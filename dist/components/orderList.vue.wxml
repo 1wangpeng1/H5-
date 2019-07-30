@@ -1,0 +1,47 @@
+<template name="73665f98">
+  <view class="_div data-v-1746065b orderLi" wx:if="{{listType === 'shopOrders'}}">
+    <view class="_div data-v-1746065b orderLiTitle">
+      <view class="_div data-v-1746065b"><label class="_span data-v-1746065b name">{{item.storeName}}</label> <label class="_span data-v-1746065b orderNo">订单号：{{item.orderNo}}</label> <label class="_span data-v-1746065b copyBtn" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">复制</label></view>
+      <view class="_div data-v-1746065b orderStatus">{{item.status}}</view>
+    </view>
+    <view class="_div data-v-1746065b orderLiGoods" wx:key="index" key="{{index}}" wx:for="{{item.items}}" wx:for-index="index" wx:for-item="i">
+      <image class="_img data-v-1746065b orderLiGoodsImg" src="/static/test/goodsImg.png"></image>
+      <view class="_div data-v-1746065b orderLiGoodsMsg">
+        <view class="_div data-v-1746065b goodsMsgTop">
+          <view class="_div data-v-1746065b goodsName">{{i.pname}}</view>
+          <view class="_div data-v-1746065b goodsPrice">¥{{i.retailPrice}}</view>
+        </view>
+        <view class="_div data-v-1746065b goodsMsgBottom">
+          <view class="_div data-v-1746065b goodsDetail">{{i.brief}}</view>
+          <view class="_div data-v-1746065b goodsNum">x{{i.num}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-1746065b orderLiNum">共{{item.goodsNum}}件商品 合计：￥{{item.payMoney}}</view>
+  </view>
+  <view class="_div data-v-1746065b orderLi" wx:elif="{{listType === 'myOrders'}}">
+    <view class="_div data-v-1746065b orderLiTitle">
+      <view class="_div data-v-1746065b"><label class="_span data-v-1746065b name">{{item.storeName}}</label> <label class="_span data-v-1746065b orderNo">订单号：{{item.orderNo}}</label> <label class="_span data-v-1746065b copyBtn" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">复制</label></view>
+      <view class="_div data-v-1746065b orderStatus">{{item.status}}</view>
+    </view>
+    <view class="_div data-v-1746065b orderLiGoods" wx:key="index" key="{{index}}" wx:for="{{item.items}}" wx:for-index="index" wx:for-item="i">
+      <image class="_img data-v-1746065b orderLiGoodsImg" src="/static/test/goodsImg.png"></image>
+      <view class="_div data-v-1746065b orderLiGoodsMsg">
+        <view class="_div data-v-1746065b goodsMsgTop">
+          <view class="_div data-v-1746065b goodsName">{{i.pname}}</view>
+          <view class="_div data-v-1746065b goodsPrice">¥{{i.retailPrice}}</view>
+        </view>
+        <view class="_div data-v-1746065b goodsMsgBottom">
+          <view class="_div data-v-1746065b goodsDetail">{{i.brief}}</view>
+          <view class="_div data-v-1746065b goodsNum">x{{i.num}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-1746065b orderLiNum">共{{item.goodsNum}}件商品 合计：￥{{item.payMoney}}</view>
+    <view class="_div data-v-1746065b functionBtn">
+      <view class="_div data-v-1746065b btn blackBtn">取消订单</view>
+      <view class="_div data-v-1746065b btn colorBtn">付款</view>
+      <view class="_div data-v-1746065b btn colorBtn">提醒发货</view>
+    </view>
+  </view>
+</template>

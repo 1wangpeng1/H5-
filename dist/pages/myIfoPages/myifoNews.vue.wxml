@@ -1,0 +1,12 @@
+<template name="6f5517a1">
+  <view class="_div data-v-6fccedca newsList myifoSet">
+    <van-cell-group class="_van-cell-group data-v-6fccedca">
+      <van-cell wx:key="index" key="{{index}}" title="{{item.title}}" value="{{item.time}}" url="{{'/pages/myIfoPages/newsDetail?newsId=' + item.id}}" wx:for="{{newsList}}" wx:for-index="index" wx:for-item="item" class="_van-cell data-v-6fccedca">
+        <van-icon slot="icon" class="_van-icon data-v-6fccedca custom-icon"></van-icon>
+        <view slot="icon" class="_div data-v-6fccedca">
+          <image class="_img data-v-6fccedca cellImg" src="/static/images/myifoNews.png"></image>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</template>

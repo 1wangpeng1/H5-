@@ -1,0 +1,66 @@
+<import src="/components/myTabbar.vue.wxml" /><template name="ef792e3c">
+  <view class="_div data-v-3cfbcd56">
+    <view wx:if="{{openShopping === true}}" class="_div data-v-3cfbcd56 shopCard">
+      <view class="_div data-v-3cfbcd56 shopCardBg" wx:key="index" key="{{index}}" wx:for="{{shopMsg}}" wx:for-index="index" wx:for-item="item">
+        <image class="_img data-v-3cfbcd56 shopCardBgImg" src="{{item.background}}"></image>
+        <view class="_div data-v-3cfbcd56 functionBtn">
+          <image class="_img data-v-3cfbcd56 ‘peoShareShop’" src="/static/images/peoShareShop.png" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}"></image>
+          <image class="_img data-v-3cfbcd56 ‘delectShop’" src="/static/images/delectShop.png" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}"></image>
+          <image class="_img data-v-3cfbcd56 ‘editShop’" src="/static/images/editShop.png" bindtap="handleProxy" data-eventid="{{'2_'+index}}" data-comkey="{{$k}}"></image>
+        </view>
+        <view bindtap="handleProxy" hover-class="none" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" class="_div data-v-3cfbcd56">
+          <image class="_img data-v-3cfbcd56 enterShop" src="/static/images/enterShop.png"></image>
+        </view>
+        <view class="_div data-v-3cfbcd56 shopSeller">
+          <image class="_img data-v-3cfbcd56 shopSellerPic" src="{{item.pic}}"></image>
+          <view class="_div data-v-3cfbcd56 shopSellerMsg">
+            <view class="_div data-v-3cfbcd56 shopSellerName"><label class="_span data-v-3cfbcd56">{{item.storeName}}</label>
+              <image src="/static/images/editName.png" bindtap="handleProxy" data-eventid="{{'4_'+index}}" data-comkey="{{$k}}" class="_img data-v-3cfbcd56"></image>
+            </view>
+            <view class="_div data-v-3cfbcd56 shopSellerDet">{{item.detail}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{openShopping === true}}" class="_div data-v-3cfbcd56 invitefriend">
+      <image bindtap="handleProxy" src="/static/images/invitefriend.png" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_img data-v-3cfbcd56"></image>
+    </view>
+    <view wx:else class="_div data-v-3cfbcd56 startOpen">
+      <navigator class="_navigator data-v-3cfbcd56 startOpenBtn" url="/pages/shopping/openShopping/editShopping?openShopping=true"></navigator>
+    </view>
+    <van-popup z-index="1000" show="{{delectShow}}" close-on-click-overlay="false" close="{{onClose}}" class="_van-popup data-v-3cfbcd56">
+      <view class="_div data-v-3cfbcd56 delectPopup">
+        <view class="_div data-v-3cfbcd56 delectTitle">
+          <image src="/static/images/warn.png" class="_img data-v-3cfbcd56"></image> <label class="_span data-v-3cfbcd56">确定要删除店铺？</label>
+        </view>
+        <view class="_div data-v-3cfbcd56 delectContent">删除店铺后您邀请的朋友店铺将和您取消关系！</view>
+        <view class="_div data-v-3cfbcd56 delectBtn">
+          <view class="_div data-v-3cfbcd56 delectLeftBtn" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}">删除店铺</view>
+          <view class="_div data-v-3cfbcd56 delectRightBtn" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">重新开店</view>
+        </view>
+        <image class="_img data-v-3cfbcd56 closeDelect" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <van-popup z-index="1000" show="{{friendShow}}" close-on-click-overlay="false" close="{{friendClose}}" class="_van-popup data-v-3cfbcd56">
+      <view class="_div data-v-3cfbcd56 friendPopup delectPopup">
+        <view class="_div data-v-3cfbcd56 delectTitle"><label class="_span data-v-3cfbcd56">成功邀请好友注册店铺</label></view>
+        <view class="_div data-v-3cfbcd56 delectContent">你会获得好友店铺销售额5%的奖励</view>
+        <view class="_div data-v-3cfbcd56 delectBtn">
+          <image src="/static/images/invitefriend.png" class="_img data-v-3cfbcd56"></image>
+        </view>
+        <image class="_img data-v-3cfbcd56 closeDelect" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <view class="_div data-v-3cfbcd56 popupBg" wx:if="{{sharePopup}}" bindtap="handleProxy" data-eventid="{{'13'}}" data-comkey="{{$k}}">
+      <painter customStyle="{{customStyle}}" catchtap="handleProxy" bindimgOK="handleProxy" palette="{{template}}" dirty="{{true}}" data-eventid="{{'10'}}" data-comkey="{{$k}}" class="_painter data-v-3cfbcd56"></painter>
+      <view class="_div data-v-3cfbcd56 functionBtn"><button data-name="shareBtn" plain="true" open-type="share" class="_button data-v-3cfbcd56 shareBtn" catchtap="handleProxy" data-eventid="{{'11'}}" data-comkey="{{$k}}">
+          <image src="/static/images/shareWx.png" class="_img data-v-3cfbcd56"></image> 微信好友
+        </button>
+        <view class="_div data-v-3cfbcd56 saveBtn" catchtap="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}">
+          <image src="/static/images/shareDown.png" class="_img data-v-3cfbcd56"></image> 保存图片
+        </view>
+      </view>
+    </view>
+    <van-toast id="van-toast" class="_van-toast data-v-3cfbcd56"></van-toast> <template data="{{...$root[$kk+'4'], $root}}" is="31cc239c"></template>
+  </view>
+</template>

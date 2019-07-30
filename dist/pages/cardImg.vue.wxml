@@ -1,0 +1,13 @@
+<template name="8b183906">
+  <view class="_div data-v-13b293f0 popupBg">
+    <painter customStyle="{{customStyle}}" bindimgOK="handleProxy" palette="{{template}}" dirty="{{true}}" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_painter data-v-13b293f0"></painter>
+    <view class="_div data-v-13b293f0 functionBtn">
+      <view class="_div data-v-13b293f0 shareBtn">
+        <image src="/static/images/shareWx.png" class="_img data-v-13b293f0"></image> 微信好友
+      </view>
+      <view class="_div data-v-13b293f0 saveBtn" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+        <image src="/static/images/shareDown.png" class="_img data-v-13b293f0"></image> 保存图片
+      </view>
+    </view>
+  </view>
+</template>

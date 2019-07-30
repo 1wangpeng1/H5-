@@ -1,0 +1,32 @@
+@import "../../common/vendor.wxss";
+
+.addressMsgCity.data-v-6ff00eec {
+  position: relative;
+}
+.addressMsgCity .cityChangeBtn.data-v-6ff00eec {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  position: absolute;
+  top: 0;
+  right: 24rpx;
+  z-index: 9;
+  color: #333;
+}
+.addressDefault.data-v-6ff00eec {
+  margin: 32rpx auto;
+  font-size: 26rpx;
+}
+.saveBtn.data-v-6ff00eec {
+  width: 630rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  margin: 0 auto;
+  background: #87967C;
+  -webkit-border-radius: 8rpx;
+  -moz-border-radius: 8rpx;
+  border-radius: 8rpx;
+  color: #fff;
+  font-size: 26rpx;
+}

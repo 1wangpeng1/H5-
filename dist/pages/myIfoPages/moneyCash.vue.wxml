@@ -1,0 +1,27 @@
+<template name="e0ea760a">
+  <view class="_div data-v-2f619316 cashBg">
+    <view style="height: 38rpx;width: 100%;background: #F8F8F9;" class="_div data-v-2f619316"></view>
+    <view class="_div data-v-2f619316 moneyCash">
+      <view class="_div data-v-2f619316 bankType"><label class="_span data-v-2f619316">到账银行卡</label><label class="_span data-v-2f619316">中国银行（5566）</label></view>
+      <view class="_div data-v-2f619316 moneyCashInputDiv"><label class="_label data-v-2f619316">￥</label> <input class="_input data-v-2f619316 moneyCashInput" value="{{moneyNum}}" bindinput="handleProxy" type="digit" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+        <view class="_div data-v-2f619316 realMoney" wx:if="{{moneyNum !== ''}}">实时到账 ￥{{(moneyNum - 2) < 0 ? 0 : moneyNum - 2}}</view>
+      </view>
+      <view class="_div data-v-2f619316 moneyCashNum">
+        <view class="_div data-v-2f619316"><label class="_span data-v-2f619316">可提现￥{{allMoneyNum}}，</label><label class="_span data-v-2f619316 allMoneyCash" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">全部提现</label></view>
+        <view class="_div data-v-2f619316 moneyRule" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">提现规则</view>
+      </view>
+      <view class="_div data-v-2f619316 moneyCashBtn" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">提现</view>
+    </view>
+    <van-popup z-index="1000" show="{{ruleShow}}" close-on-click-overlay="false" close="{{onClose}}" class="_van-popup data-v-2f619316">
+      <view class="_div data-v-2f619316 delectPopup">
+        <view class="_div data-v-2f619316 delectTitle">
+          <image src="/static/images/smallWarn.png" class="_img data-v-2f619316"></image> <label class="_span data-v-2f619316">邀请规则</label>
+        </view>
+        <view class="_div data-v-2f619316 delectContent">店铺销售额满100元即可提现，提现需收取手续费每笔2元，提现成功后到达绑定银行卡，到账会有延迟请耐心等待，有问题请联系客服</view>
+        <view class="_div data-v-2f619316 delectBtn" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}"> 我知道了 </view>
+        <image class="_img data-v-2f619316 closeDelect" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <van-toast id="van-toast" class="_van-toast data-v-2f619316"></van-toast>
+  </view>
+</template>

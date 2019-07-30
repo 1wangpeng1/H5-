@@ -1,0 +1,13 @@
+@import "../../common/vendor.wxss";
+
+.shopOrdersBg.data-v-3df2aaee {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: #F8F8F9;
+  padding: 0 16rpx 16rpx;
+  box-sizing: border-box;
+}
+.shopOrdersBg .tab-active-class.data-v-3df2aaee {
+  color: #ff0;
+}

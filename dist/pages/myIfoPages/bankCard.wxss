@@ -1,0 +1,145 @@
+@import "../../common/vendor.wxss";
+
+.pageBg.data-v-1af1ad7a {
+  width: 100%;
+  height: 100vh;
+  background: #333;
+}
+.pageBg .topGap.data-v-1af1ad7a {
+  width: 100%;
+  height: 50rpx;
+  background: #333;
+}
+.pageBg .addBankCard.data-v-1af1ad7a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #8E8E8E;
+  font-size: 32rpx;
+  width: 100%;
+  height: 100rpx;
+  background: #353535;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #424242;
+  border-bottom: 2rpx solid #424242;
+}
+.pageBg .addBankCard .plus.data-v-1af1ad7a {
+  color: #747474;
+  font-size: 60rpx;
+  font-weight: 400;
+  margin-right: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.pageBg .addBankCard .plus ._img.data-v-1af1ad7a {
+  width: 42rpx;
+  height: 42rpx;
+}
+.pageBg .addBankCard .addBankCardRight.data-v-1af1ad7a {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+.pageBg .bankMsg.data-v-1af1ad7a {
+  position: relative;
+  width: 714rpx;
+  height: 225.99999999999997rpx;
+  margin: 0 18rpx 24rpx;
+  color: #fff;
+  -webkit-border-radius: 8rpx;
+  -moz-border-radius: 8rpx;
+  border-radius: 8rpx;
+  background-size: 100% 100%;
+  display: flex;
+  padding: 26rpx 30rpx;
+  box-sizing: border-box;
+}
+.pageBg .bankMsg .logoBg.data-v-1af1ad7a {
+  width: 70rpx;
+  height: 70rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  margin-right: 12rpx;
+}
+.pageBg .bankMsg .logoBg ._img.data-v-1af1ad7a {
+  width: 50rpx;
+  height: 50rpx;
+}
+.pageBg .bankMsg .bankName.data-v-1af1ad7a {
+  font-size: 30rpx;
+}
+.pageBg .bankMsg .bankType.data-v-1af1ad7a {
+  font-size: 26rpx;
+  padding: 6rpx 0 20rpx;
+}
+.pageBg .bankMsg .cardNo.data-v-1af1ad7a {
+  font-size: 46rpx;
+}
+.pageBg .bankMsg .delectBank.data-v-1af1ad7a {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+.pageBg .delectPopup.data-v-1af1ad7a {
+  position: relative;
+  width: 634rpx;
+  height: 332rpx;
+  padding-top: 52rpx;
+  background: #fff;
+  -webkit-border-radius: 12rpx;
+  -moz-border-radius: 12rpx;
+  border-radius: 12rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pageBg .delectPopup .closeDelect.data-v-1af1ad7a {
+  position: absolute;
+  top: 18rpx;
+  right: 18rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+.pageBg .delectPopup .delectTitle ._img.data-v-1af1ad7a {
+  width: 10rpx;
+  height: 36rpx;
+  padding-right: 20rpx;
+  vertical-align: middle;
+}
+.pageBg .delectPopup .delectTitle ._span.data-v-1af1ad7a {
+  color: #333;
+  font-size: 32rpx;
+}
+.pageBg .delectPopup .delectContent.data-v-1af1ad7a {
+  color: #999;
+  font-size: 26rpx;
+  text-align: center;
+  padding: 44rpx 0;
+}
+.pageBg .delectPopup .delectBtn.data-v-1af1ad7a {
+  display: flex;
+  width: 100%;
+  height: 102rpx;
+  line-height: 102rpx;
+  border-top: 2rpx solid #F2F2F2;
+  font-size: 32rpx;
+}
+.pageBg .delectPopup .delectBtn .delectLeftBtn.data-v-1af1ad7a {
+  width: 50%;
+  text-align: center;
+  color: #999;
+}
+.pageBg .delectPopup .delectBtn .delectRightBtn.data-v-1af1ad7a {
+  flex: 1;
+  background: #F49E2A;
+  color: #fff;
+}

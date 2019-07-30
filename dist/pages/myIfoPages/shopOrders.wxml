@@ -1,0 +1,1 @@
+<import src="/pages/myIfoPages/shopOrders.vue.wxml" /><template is="213cecc3" data="{{ ...$root['0'], $root }}"/>

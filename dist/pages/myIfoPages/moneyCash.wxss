@@ -1,0 +1,126 @@
+@import "../../common/vendor.wxss";
+
+.cashBg.data-v-2f619316 {
+  width: 100%;
+  height: 100vh;
+  background: #F8F8F9;
+  margin: 0 auto;
+}
+.cashBg .moneyCash.data-v-2f619316 {
+  width: 686rpx;
+  height: 533rpx;
+  background: #fff;
+  -webkit-border-radius: 8rpx;
+  -moz-border-radius: 8rpx;
+  border-radius: 8rpx;
+  padding: 36rpx 44rpx 48rpx;
+  color: #333;
+  font-size: 28rpx;
+  margin: 0 32rpx;
+  box-sizing: border-box;
+}
+.cashBg .moneyCash .bankType.data-v-2f619316 {
+  margin-bottom: 50rpx;
+}
+.cashBg .moneyCash .bankType ._span.data-v-2f619316 {
+  padding-right: 32rpx;
+}
+.cashBg .moneyCash .moneyCashInputDiv.data-v-2f619316 {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 70rpx;
+  color: #333;
+  display: flex;
+  position: relative;
+}
+.cashBg .moneyCash .moneyCashInputDiv ._label.data-v-2f619316 {
+  padding-right: 20rpx;
+}
+.cashBg .moneyCash .moneyCashInputDiv .moneyCashInput.data-v-2f619316 {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.cashBg .moneyCash .moneyCashInputDiv .realMoney.data-v-2f619316 {
+  position: absolute;
+  right: 0;
+  color: #f33;
+  font-size: 24rpx;
+}
+.cashBg .moneyCash .moneyCashNum.data-v-2f619316 {
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  font-size: 24rpx;
+  padding: 28rpx 0 80rpx;
+  margin-top: 30rpx;
+  border-top: 2rpx solid #F0F0F0;
+}
+.cashBg .moneyCash .moneyCashNum .allMoneyCash.data-v-2f619316 {
+  color: #09e;
+}
+.cashBg .moneyCash .moneyCashNum .moneyRule.data-v-2f619316 {
+  width: 122rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  color: #87967C;
+  border: 2rpx solid #87967C;
+  -webkit-border-radius: 8rpx;
+  -moz-border-radius: 8rpx;
+  border-radius: 8rpx;
+}
+.cashBg .moneyCash .moneyCashBtn.data-v-2f619316 {
+  width: 598rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  border-radius: 6rpx;
+  background: #87967C;
+  color: #fff;
+  font-size: 38rpx;
+  text-align: center;
+}
+.delectPopup.data-v-2f619316 {
+  position: relative;
+  width: 578rpx;
+  height: 384rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkIAAAHSBAMAAADyB7ntAAAAElBMVEVHcEz9/f/8/f/////U4P7m7f+yZ1idAAAAA3RSTlMAQZ4EowTZAAAEMElEQVR42u3WTU7bQBiAYUPVPaJij1RxgKqaA7Qa76uO5/5XqZOACCVx/DOTBPy8i6zi2H78zcRN03f//afe9/euee4expEed0C3JI4VdlNkiR3vhxE6NUQboW8cBvrTCyUMw8vshsKJZWYbGu6u+QLhxCuRjZoQIUKECBEiREiECBEiRIgQIUIiRIgQIUKECBESIUKECBEiRIiQCBEiRIgQIUKERIgQIUKECBEiJEKECBEiRIgQIREiRIgQIUKECIkQIUKECBEiREiECBEiRIgQIUIiRIgQIUKECBESIUKECBEiRIiQCBEiRIgQIUKERIgQIUKECBEiJEKECBEiRIgQIREiRIgQIUKECBEiRIgQIUKECBEiJEKECBEiRIgQIREiRIgQIUKECIkQIUKECBEiREiECBEiRIgQIUIiRIgQIUKECBESIUKECBEiRIiQCBEiRIgQIUKERIgQIUKECBEiJEKECBEiRIgQIREiRIgQIUKECIkQIUKECBEiREiECBEiRIgQIUIiRIgQIUKECBESIUKECBEiRIiQCBEiRIgQIUKECBEiRIgQIUKECBESIUKECBEiRIiQCBEiRIgQIUKERIgQIUKECBEiJEKECBEiRIgQIREiRIgQIUKECIkQIUKECBEiREiECBEiRIgQIUIiRIgQIUKECBESIUKECBEiRIiQCBEiRIgQIUKERIgQIUKECBEiJEKECBEiRIgQIREiRIgQIUKECIkQIUKECBEiREiECBEiRIgQIUKECBEiRIgQIUKEVlMIIW9KKRE6oJP/KxDaKx8uERr02UZo2Kdv9UIhE1rks3ahEUCrFhrjs2qhnAkV8BkS6l+9Uw6bz7TWBXZUKB36Ylinz3uhNPjtlS2w90IjbD/+kst5ttDYQy603sKun+msPq9Ck5ZmPq9MuceU82yhycedZ7GloheR82yheYdeVmfqvhhyni2UZxfOu7IWPKo0/yYfm4e8pEvrjHpUackdLhUqjJQqXMXC2ysgVGrbTguvIhTdfsoKLZ+kVOUiQijwm8WE5r9uh1yw8uoFheYgpVy8VGT3qSU05RUghFypVNS9vNCYUUq5Xl0XY7x2oSGlmjjPPNvaqxc6oFQXpy++7QMIvSpVx3kdnv3aCZPU5XZb7Daf3fmEdk+27hnaONBM3BfjWFlo7gNdOjxv62bRPldTaNrVVtLZO/P+qdt27GHVhAbPWmCc2nimKgmNO3k7T2ra6Fyj0OQb6LrrxKkktOge3vzPXhynilDJ23h5MWnbeMHKCnXx81VS6DP6FBWKkdDq5qegUIyEVupTRKiLhFbss1woRkLr9lkm1EVCfBYIrQWoF/rKZ7C75tYOfULohs9gTdO0FthAv3qhBwM0uFE3kzaibm1Am0XWNE98BhfZ+CGKK6zZdW+Ajv7VvxA9GaAD/d4C/QNa81IvThEZkQAAAABJRU5ErkJggg==);
+  background-size: 100% 100%;
+  text-align: center;
+}
+.delectPopup .closeDelect.data-v-2f619316 {
+  position: absolute;
+  top: -14rpx;
+  right: 18rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+.delectPopup .delectTitle.data-v-2f619316 {
+  margin: 28rpx 0;
+}
+.delectPopup .delectTitle ._img.data-v-2f619316 {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 20rpx;
+  vertical-align: middle;
+}
+.delectPopup .delectTitle ._span.data-v-2f619316 {
+  color: #333;
+  font-size: 32rpx;
+}
+.delectPopup .delectContent.data-v-2f619316 {
+  padding: 0 46rpx 32rpx;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 26rpx;
+  text-align: left;
+  letter-spacing: 2rpx;
+}
+.delectPopup .delectBtn.data-v-2f619316 {
+  border-top: 2rpx solid #EFEFEF;
+  padding-top: 16rpx;
+  text-align: center;
+  color: #1790FF;
+  font-size: 32rpx;
+}

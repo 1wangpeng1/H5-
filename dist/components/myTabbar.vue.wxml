@@ -1,0 +1,15 @@
+<template name="31cc239c">
+  <view class="_div data-v-f2c451aa tabbar_box" style=" {{('background-color:' + tabbar.backgroundColor + ';')}}">
+    <block wx:key="index" key="{{index}}" wx:for="{{tabbar.list}}" wx:for-index="index" wx:for-item="item">
+      <navigator url="{{item.pagePath}}" open-type="switchTab" wx:if="{{item.isSpecial}}" class="_navigator data-v-f2c451aa tabbar_nav" hover-class="none" style=" {{('color:' + (item.selected ? tabbar.selectedColor : tabbar.color) + ';')}}">
+        <view class="_div data-v-f2c451aa special-wrapper">
+          <image class="_img data-v-f2c451aa tabbar_icon" src="{{item.iconPath}}"></image>
+        </view>
+        <image class="_img data-v-f2c451aa special-text-wrapper"></image> <label class="_span data-v-f2c451aa">{{item.text}}</label>
+      </navigator>
+      <navigator url="{{item.pagePath}}" open-type="switchTab" wx:else class="_navigator data-v-f2c451aa tabbar_nav" hover-class="none" style=" {{('color:' + (item.selected ? tabbar.selectedColor : tabbar.color) + ';')}}">
+        <image class="_img data-v-f2c451aa tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image> <label class="_span data-v-f2c451aa">{{item.text}}</label>
+      </navigator>
+    </block>
+  </view>
+</template>

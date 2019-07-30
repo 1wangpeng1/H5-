@@ -1,0 +1,22 @@
+<import src="/components/goodsList.vue.wxml" /><template name="04bcd4d2">
+  <view class="_div data-v-69aecad1">
+    <scroll-view scroll-y scroll-top="{{scrollTop}}" style="height: 100vh;" bindscrolltolower="handleProxy" bindscroll="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_scroll-view data-v-69aecad1">
+      <view class="_div data-v-69aecad1 indexTab">
+        <view class="_div data-v-69aecad1 tabOne" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-69aecad1 tabOneHot" src="/static/images/tabOne1.png" style=" {{('margin-bottom:' + (marginBottom ? '10rpx' : '0rpx') + ';')}}"></image>
+          <image src="{{tabOne ? tabOneImg.active : tabOneImg.normal}}" class="_img data-v-69aecad1 {{tabOne ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+        <view class="_div data-v-69aecad1 tabTwo" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+          <image src="{{tabTwo ? tabTwoImg.active : tabTwoImg.normal}}" class="_img data-v-69aecad1 {{tabTwo ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+        <view class="_div data-v-69aecad1 tabThree" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+          <image src="{{tabThree ? tabThreeImg.active : tabThreeImg.normal}}" class="_img data-v-69aecad1 {{tabThree ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+      </view>
+      <view class="_div data-v-69aecad1 goodsListDiv"><template wx:key="index" list-type="goodsManage" bindcheckUp="handleProxy" bindcheckDown="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0_'+index], $root}}" is="40ee583c" wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item"></template>
+        <view class="_div data-v-69aecad1 loadingFinish" wx:if="{{loadingFinish}}">—— 数据已全部加载 ——</view>
+      </view>
+      <van-toast id="van-toast" class="_van-toast data-v-69aecad1"></van-toast>
+    </scroll-view>
+  </view>
+</template>

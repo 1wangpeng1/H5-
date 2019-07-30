@@ -1,0 +1,47 @@
+<template name="077ff21d">
+  <view class="_div data-v-35d00e9d pagesBg">
+    <view class="_div data-v-35d00e9d addAddress" wx:if="{{inexistAddress}}">
+      <image src="/static/images/addAddress.png" class="_img data-v-35d00e9d"></image> <label class="_span data-v-35d00e9d">请选择收货地址</label>
+    </view>
+    <view class="_div data-v-35d00e9d addressList" wx:else>
+      <image src="/static/images/addressTips.png" class="_img data-v-35d00e9d"></image>
+      <view class="_div data-v-35d00e9d addressListRight">
+        <view class="_div data-v-35d00e9d addressMsg">
+          <view class="_div data-v-35d00e9d"><label class="_span data-v-35d00e9d addressName">宋立夏</label> <label class="_span data-v-35d00e9d addressTel">1761510082</label></view>
+          <view class="_div data-v-35d00e9d addressDetail">北京市昌平区龙泽苑街道首开智慧社东区育知东路30号院1号楼1单元6层610室</view>
+        </view> <label class="_span data-v-35d00e9d arrow">></label>
+      </view>
+    </view>
+    <view class="_div data-v-35d00e9d ordersList">
+      <view class="_div data-v-35d00e9d orderLiTitle">
+        <view class="_div data-v-35d00e9d">{{sureOrderShopName}}</view>
+        <view class="_div data-v-35d00e9d orderStatus">待付款</view>
+      </view>
+      <view class="_div data-v-35d00e9d orderLiGoods" wx:key="index" key="{{index}}" wx:for="{{sureOrderList}}" wx:for-index="index" wx:for-item="i">
+        <image class="_img data-v-35d00e9d orderLiGoodsImg" src="{{i.listImg}}"></image>
+        <view class="_div data-v-35d00e9d orderLiGoodsMsg">
+          <view class="_div data-v-35d00e9d goodsMsgTop">
+            <view class="_div data-v-35d00e9d goodsName">{{i.name}}</view>
+            <view class="_div data-v-35d00e9d goodsPrice">¥{{i.price}}</view>
+          </view>
+          <view class="_div data-v-35d00e9d goodsMsgBottom">
+            <view class="_div data-v-35d00e9d goodsDetail">{{i.brief}}</view>
+            <view class="_div data-v-35d00e9d goodsNum">*{{i.num}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-35d00e9d sureOrderTips">
+        <van-cell-group class="_van-cell-group data-v-35d00e9d">
+          <van-field border="{{false}}" placeholder="快递 免邮" placeholder-style="color:#999999;" label="配送方式" disabled class="_van-field data-v-35d00e9d"></van-field>
+          <van-field border="false" bindchange="handleProxy" value="{{remarks}}" placeholder="选填" placeholder-style="color:#D3D3D3;" label="订单备注" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-field data-v-35d00e9d"></van-field>
+        </van-cell-group>
+      </view>
+      <view class="_div data-v-35d00e9d orderLiNum">共{{totleNum}}件商品 合计：<label class="_span data-v-35d00e9d">￥{{totlePrice}}</label></view>
+    </view>
+    <view class="_div data-v-35d00e9d submitDiv">
+      <view class="_div data-v-35d00e9d allMoney">合计：<label class="_span data-v-35d00e9d">￥{{totlePrice}}</label></view>
+      <view class="_div data-v-35d00e9d submitBtn" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">提交订单</view>
+    </view>
+    <van-toast id="van-toast" class="_van-toast data-v-35d00e9d"></van-toast>
+  </view>
+</template>

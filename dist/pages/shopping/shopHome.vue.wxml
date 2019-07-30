@@ -1,0 +1,107 @@
+<import src="/components/goodsList.vue.wxml" /><template name="c97cff5a">
+  <view class="_div data-v-2f985859">
+    <scroll-view scroll-y style="height: 100vh;" bindscrolltolower="handleProxy" bindscroll="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_scroll-view data-v-2f985859">
+      <view class="_div data-v-2f985859 shopCard box">
+        <view class="_div data-v-2f985859 shopCardBg">
+          <image class="_img data-v-2f985859 shopCardBgImg" src="{{shoppingMsg.background}}"></image>
+          <view class="_div data-v-2f985859 functionBtn">
+            <image class="_img data-v-2f985859 peoShareShop" bindtap="handleProxy" src="/static/images/peoShareShop.png" data-eventid="{{'0'}}" data-comkey="{{$k}}"></image>
+          </view>
+          <navigator wx:if="{{shopHome === 'shopHomeMy'}}" url="{{'/pages/shopping/shopGoodsManage?shopHomeId='+shopHomeId}}" hover-class="none" class="_navigator data-v-2f985859">
+            <image class="_img data-v-2f985859 enterShop" src="/static/images/goodsManage.png"></image>
+          </navigator>
+          <navigator wx:if="{{shopHome === 'shopHomeOther'}}" open-type="switchTab" url="/pages/setShop" hover-class="none" class="_navigator data-v-2f985859">
+            <image class="_img data-v-2f985859 enterShop" src="/static/images/otherOpen.png"></image>
+          </navigator>
+          <view class="_div data-v-2f985859 shopSeller">
+            <image class="_img data-v-2f985859 shopSellerPic" src="{{shoppingMsg.pic}}"></image>
+            <view class="_div data-v-2f985859 shopSellerMsg">
+              <view class="_div data-v-2f985859 shopSellerName"><label class="_span data-v-2f985859">{{shoppingMsg.storeName}}</label>
+                <image wx:if="{{shopHome === 'shopHomeMy'}}" bindtap="handleProxy" src="/static/images/editName.png" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_img data-v-2f985859"></image>
+              </view>
+              <view class="_div data-v-2f985859 shopSellerDet">{{shoppingMsg.detail}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-2f985859 indexTab {{fixtop ? 'fix' : ''}}" id="fixd">
+        <view class="_div data-v-2f985859 tabOne" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-2f985859 tabOneHot" src="/static/images/tabOne1.png" style=" {{('margin-bottom:' + (marginBottom ? '10rpx' : '0rpx') + ';')}}"></image>
+          <image src="{{tabOne ? tabOneImg.active : tabOneImg.normal}}" class="_img data-v-2f985859 {{tabOne ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+        <view class="_div data-v-2f985859 tabTwo" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+          <image src="{{tabTwo ? tabTwoImg.active : tabTwoImg.normal}}" class="_img data-v-2f985859 {{tabTwo ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+        <view class="_div data-v-2f985859 tabThree" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+          <image src="{{tabThree ? tabThreeImg.active : tabThreeImg.normal}}" class="_img data-v-2f985859 {{tabThree ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+      </view>
+      <view class="_div data-v-2f985859 goodsListDiv"><template wx:key="index" bindcheck="handleProxy" data-eventid="{{'5_'+index}}" data-comkey="{{$k}}" data="{{...$root[$kk+'0_'+index], $root}}" is="40ee583c" wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item"></template>
+        <view class="_div data-v-2f985859 loadingFinish" wx:if="{{loadingFinish}}">—— 数据已全部加载 ——</view>
+      </view>
+    </scroll-view>
+    <van-popup z-index="1000" show="{{goodsDialogShow}}" close-on-click-overlay="false" close="{{onClose}}" class="_van-popup data-v-2f985859">
+      <view class="_div data-v-2f985859 goodsDialogPopup">
+        <view class="_div data-v-2f985859 goodsDetail">
+          <view class="_div data-v-2f985859 goodsImg">
+            <image src="{{goodsDialogMsg.listImg}}" class="_img data-v-2f985859"></image>
+          </view>
+          <view class="_div data-v-2f985859 goodsDetailRight">
+            <view class="_div data-v-2f985859 goodsTitle">{{goodsDialogMsg.name}}</view>
+            <view class="_div data-v-2f985859 goodswords">{{goodsDialogMsg.brief}}</view>
+            <view class="_div data-v-2f985859 goodsdPrice">￥{{goodsDialogMsg.price}}</view>
+          </view>
+        </view>
+        <view class="_div data-v-2f985859 goodsNum">
+          <view class="_div data-v-2f985859 goodsNumChange">
+            <view class="_div data-v-2f985859">购买数量</view>
+            <view class="_div data-v-2f985859">
+              <van-stepper value="{{goodsBuyNum}}" bindchange="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-stepper data-v-2f985859"></van-stepper>
+            </view>
+          </view>
+          <view class="_div data-v-2f985859 goodsNumRecord">共{{goodsBuyNum}}件商品 小计：<label class="_span data-v-2f985859">￥{{totlePrice}}</label></view>
+          <view class="_div data-v-2f985859 goodsBuyBtn">
+            <view class="_div data-v-2f985859 addCartBtn" bindtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}">加入购物车</view>
+            <view class="_div data-v-2f985859 buyBtn" bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}">购买</view>
+          </view>
+        </view>
+        <image class="_img data-v-2f985859 closeGoodsDialog" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <view class="_div data-v-2f985859 shopCardDiv" wx:if="{{shopCartLists.length > 0}}">
+      <view class="_div data-v-2f985859 shopCardDivLeft" bindtap="handleProxy" data-eventid="{{'11'}}" data-comkey="{{$k}}">
+        <image src="/static/images/shopCart.png" class="_img data-v-2f985859"></image> <label class="_span data-v-2f985859 tips">{{shopCartLists.length}}</label>
+      </view>
+      <view class="_div data-v-2f985859 shopCardDivRight">
+        <view class="_div data-v-2f985859 shopCardAllMoney">￥<label class="_span data-v-2f985859">{{allMoney}}</label></view>
+        <view class="_div data-v-2f985859 shopCardBtn" bindtap="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}">立即下单</view>
+      </view>
+    </view>
+    <van-popup z-index="99" show="{{shopCartShow}}" position="bottom" close-on-click-overlay="false" close="{{shopCartClose}}" class="_van-popup data-v-2f985859">
+      <view class="_div data-v-2f985859 shopCartPopup" bindtouchmove="handleProxy" data-eventid="{{'16'}}" data-comkey="{{$k}}">
+        <view class="_div data-v-2f985859 clearShopCart">
+          <image bindtap="handleProxy" src="/static/images/delect.png" data-eventid="{{'13'}}" data-comkey="{{$k}}" class="_img data-v-2f985859"></image> <label bindtap="handleProxy" data-eventid="{{'14'}}" data-comkey="{{$k}}" class="_span data-v-2f985859">清空购物车</label>
+        </view>
+        <view class="_div data-v-2f985859 shopCartGoods">
+          <view class="_div data-v-2f985859 shopCartList" wx:key="index" key="{{index}}" wx:for="{{shopCartLists}}" wx:for-index="index" wx:for-item="item">
+            <view class="_div data-v-2f985859">{{item.name}}</view>
+            <view class="_div data-v-2f985859">￥{{item.price * item.num}}</view>
+            <van-stepper value="{{item.num}}" bindchange="handleProxy" min="{{0}}" data-eventid="{{'15_'+index}}" data-comkey="{{$k}}" class="_van-stepper data-v-2f985859"></van-stepper>
+          </view>
+        </view>
+        <view class="_div data-v-2f985859 tips"></view>
+      </view>
+    </van-popup>
+    <view class="_div data-v-2f985859 popupBg" wx:if="{{sharePopup}}" bindtap="handleProxy" data-eventid="{{'20'}}" data-comkey="{{$k}}">
+      <painter customStyle="{{customStyle}}" catchtap="handleProxy" bindimgOK="handleProxy" palette="{{template}}" dirty="{{true}}" data-eventid="{{'17'}}" data-comkey="{{$k}}" class="_painter data-v-2f985859"></painter>
+      <view class="_div data-v-2f985859 functionBtn"><button data-name="shareBtn" plain="true" open-type="share" class="_button data-v-2f985859 shareBtn" catchtap="handleProxy" data-eventid="{{'18'}}" data-comkey="{{$k}}">
+          <image src="/static/images/shareWx.png" class="_img data-v-2f985859"></image> 微信好友
+        </button>
+        <view class="_div data-v-2f985859 saveBtn" catchtap="handleProxy" data-eventid="{{'19'}}" data-comkey="{{$k}}">
+          <image src="/static/images/shareDown.png" class="_img data-v-2f985859"></image> 保存图片
+        </view>
+      </view>
+    </view>
+    <van-toast id="van-toast" class="_van-toast data-v-2f985859"></van-toast>
+  </view>
+</template>

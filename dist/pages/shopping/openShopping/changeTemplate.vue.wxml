@@ -1,0 +1,15 @@
+<template name="76eeb9b4">
+  <view class="_div data-v-efaabb1a">
+    <view class="_div data-v-efaabb1a changeTips">为花店选一个装饰风格吧~</view>
+    <view class="_div data-v-efaabb1a templateImg">
+      <view class="_div data-v-efaabb1a templateImgLi" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{templateImg}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.small_url}}" class="_img data-v-efaabb1a"></image>
+        <view class="_div data-v-efaabb1a {{templateIndex === index ? 'templateImgYes' : 'templateImgNo'}}"></view>
+      </view>
+    </view>
+    <view class="_div data-v-efaabb1a openShopBtn">
+      <view wx:if="{{editTemplate === 'true'}}" bindtap="handleProxy" class="_div data-v-efaabb1a editBtn" data-eventid="{{'2'}}" data-comkey="{{$k}}">确认</view>
+      <image wx:else bindtap="handleProxy" src="/static/images/openShopBtn.png" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_img data-v-efaabb1a"></image>
+    </view>
+  </view>
+</template>

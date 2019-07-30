@@ -1,0 +1,8 @@
+<import src="/components/orderList.vue.wxml" /><template name="213cecc3">
+  <view class="_div data-v-3df2aaee shopOrdersBg">
+    <van-tabs active="{{tabActive}}" swipe-threshold="{{5}}" color="#7C8B71" sticky="true" border="{{false}}" bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-tabs data-v-3df2aaee">
+      <van-tab wx:key="index" key="{{index}}" title="{{item}}" wx:for="{{tabTitle}}" wx:for-index="index" wx:for-item="item" class="_van-tab data-v-3df2aaee"><template wx:key="index1" list-type="shopOrders" data="{{...$root[$kk+'0_'+index+'-'+index1], $root}}" is="73665f98" wx:for="{{allOrders}}" wx:for-index="index1" wx:for-item="item"></template></van-tab>
+    </van-tabs>
+    <view class="_div data-v-3df2aaee contact"><button open-type="contact" bindcontact="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_button data-v-3df2aaee"></button></view>
+  </view>
+</template>

@@ -1,0 +1,9 @@
+<template name="e0e82082">
+  <view class="_div data-v-15c3866c pageBg">
+    <painter customStyle="{{customStyle}}" bindimgOK="handleProxy" palette="{{template}}" dirty="{{true}}" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_painter data-v-15c3866c"></painter>
+    <view class="_div data-v-15c3866c functionBtn">
+      <view class="_div data-v-15c3866c shareBtn">微信好友</view>
+      <view class="_div data-v-15c3866c saveBtn" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">保存图片</view>
+    </view>
+  </view>
+</template>

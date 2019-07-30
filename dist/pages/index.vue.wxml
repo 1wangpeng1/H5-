@@ -1,0 +1,33 @@
+<import src="/components/goodsList.vue.wxml" />
+<import src="/components/myTabbar.vue.wxml" /><template name="9620d288">
+  <view class="_div data-v-76f5c7ef">
+    <scroll-view scroll-y style="height: calc(100vh - 98rpx);" bindscrolltolower="handleProxy" bindscroll="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_scroll-view data-v-76f5c7ef">
+      <view class="_div data-v-76f5c7ef indexBanner box">
+        <view class="_div data-v-76f5c7ef indexBannerBg"></view>
+        <image src="/static/images/shopBanner.png" class="_img data-v-76f5c7ef"></image>
+      </view>
+      <view class="_div data-v-76f5c7ef indexTab {{fixtop ? 'fix' : ''}}" id="fixd">
+        <view class="_div data-v-76f5c7ef tabOne" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+          <image class="_img data-v-76f5c7ef tabOneHot" src="/static/images/tabOne1.png" style=" {{('margin-bottom:' + (marginBottom ? '10rpx' : '0rpx') + ';')}}"></image>
+          <image src="{{tabOne ? tabOneImg.active : tabOneImg.normal}}" class="_img data-v-76f5c7ef {{tabOne ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+        <view class="_div data-v-76f5c7ef tabTwo" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+          <image src="{{tabTwo ? tabTwoImg.active : tabTwoImg.normal}}" class="_img data-v-76f5c7ef {{tabTwo ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+        <view class="_div data-v-76f5c7ef tabThree" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+          <image src="{{tabThree ? tabThreeImg.active : tabThreeImg.normal}}" class="_img data-v-76f5c7ef {{tabThree ? 'tabOn' : 'tabHeight'}}"></image>
+        </view>
+      </view>
+      <view class="_div data-v-76f5c7ef goodsListDiv"><template wx:key="index" list-type="index" data="{{...$root[$kk+'0_'+index], $root}}" is="40ee583c" wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item"></template>
+        <view class="_div data-v-76f5c7ef loadingFinish" wx:if="{{loadingFinish}}">—— 数据已全部加载 ——</view>
+      </view>
+    </scroll-view>
+    <view class="_div data-v-76f5c7ef fixedAuthorize" wx:if="{{fixedAuthorize}}">
+      <view class="_div data-v-76f5c7ef header"></view>
+      <view class="_div data-v-76f5c7ef content">
+        <view class="_div data-v-76f5c7ef">申请获取以下权限</view> <label class="_span data-v-76f5c7ef">获得你的公开信息(昵称，头像等)</label>
+      </view> <button class="_button data-v-76f5c7ef bottom" type="primary" open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">点击授权</button>
+    </view>
+    <van-toast id="van-toast" class="_van-toast data-v-76f5c7ef"></van-toast> <template data="{{...$root[$kk+'2'], $root}}" is="31cc239c"></template>
+  </view>
+</template>

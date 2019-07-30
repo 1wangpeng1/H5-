@@ -1,0 +1,56 @@
+<template name="40ee583c">
+  <view class="_div data-v-dc30e33a goodsList" bindtap="handleProxy" wx:if="{{listType === 'index'}}" data-eventid="{{'6'}}" data-comkey="{{$k}}">
+    <view class="_div data-v-dc30e33a goodsImg">
+      <image src="{{goodsList.listImg}}" class="_img data-v-dc30e33a"></image>
+    </view>
+    <view class="_div data-v-dc30e33a goodsMsg">
+      <view class="_div data-v-dc30e33a goodsTitle">{{goodsList.name}}</view>
+      <view class="_div data-v-dc30e33a goodsDetail">{{goodsList.brief}}</view>
+      <view class="_div data-v-dc30e33a goodsdPrice">
+        <view class="_div data-v-dc30e33a price"><label class="_span data-v-dc30e33a nowPrice">￥{{goodsList.price}}</label> <label class="_span data-v-dc30e33a beforePrice">原价:￥{{goodsList.retailPrice}}</label></view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-dc30e33a goodsList" bindtap="handleProxy" wx:elif="{{listType === 'shopHomeOther'}}" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+    <view class="_div data-v-dc30e33a goodsImg">
+      <image src="{{goodsList.listImg}}" class="_img data-v-dc30e33a"></image>
+    </view>
+    <view class="_div data-v-dc30e33a goodsMsg">
+      <view class="_div data-v-dc30e33a goodsTitle">{{goodsList.name}}</view>
+      <view class="_div data-v-dc30e33a goodsDetail">{{goodsList.brief}}</view>
+      <view class="_div data-v-dc30e33a goodsdPrice">
+        <view class="_div data-v-dc30e33a price"><label class="_span data-v-dc30e33a nowPrice">￥{{goodsList.price}}</label> <label class="_span data-v-dc30e33a beforePrice">原价:￥{{goodsList.retailPrice}}</label></view>
+        <view class="_div data-v-dc30e33a buyBtn" catchtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">购买</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-dc30e33a goodsList" bindtap="handleProxy" wx:elif="{{listType === 'shopHomeMy'}}" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+    <view class="_div data-v-dc30e33a goodsImg">
+      <image src="{{goodsList.listImg}}" class="_img data-v-dc30e33a"></image>
+    </view>
+    <view class="_div data-v-dc30e33a goodsMsg">
+      <view class="_div data-v-dc30e33a goodsTitle">{{goodsList.name}}</view>
+      <view class="_div data-v-dc30e33a goodsDetail">{{goodsList.brief}}</view>
+      <view class="_div data-v-dc30e33a goodsdPrice">
+        <view class="_div data-v-dc30e33a price"><label class="_span data-v-dc30e33a nowPrice">￥{{goodsList.price}}</label> <label class="_span data-v-dc30e33a beforePrice">/赚{{goodsList.retailPrice}}</label></view>
+        <view class="_div data-v-dc30e33a buyBtn" catchtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">购买</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-dc30e33a goodsList" wx:elif="{{listType === 'goodsManage'}}">
+    <view class="_div data-v-dc30e33a goodsImg">
+      <image src="{{goodsList.listImg}}" class="_img data-v-dc30e33a"></image>
+    </view>
+    <view class="_div data-v-dc30e33a goodsMsg">
+      <view class="_div data-v-dc30e33a goodsTitle">{{goodsList.name}}</view>
+      <view class="_div data-v-dc30e33a goodsDetail">{{goodsList.brief}}</view>
+      <view class="_div data-v-dc30e33a goodsdPrice">
+        <view class="_div data-v-dc30e33a price"><label class="_span data-v-dc30e33a nowPrice">￥{{goodsList.price}}</label> <label class="_span data-v-dc30e33a beforePrice">/赚{{goodsList.profit}}</label></view>
+        <view class="_div data-v-dc30e33a upOrDownBtn">
+          <image wx:if="{{goodsList.status === 1}}" catchtap="handleProxy" src="/static/images/goodsUp.png" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_img data-v-dc30e33a"></image>
+          <image wx:else catchtap="handleProxy" src="/static/images/goodsDown.png" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_img data-v-dc30e33a"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

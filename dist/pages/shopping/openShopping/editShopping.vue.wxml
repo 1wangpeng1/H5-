@@ -1,0 +1,26 @@
+<template name="7fdac56e">
+  <view class="_div data-v-32c3980a pageBg">
+    <view class="_div data-v-32c3980a shoppingAvatar">
+      <view class="_div data-v-32c3980a shoppingAvatarTitle">花店头像</view>
+      <view class="_div data-v-32c3980a shoppingAvatarUrl" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <image src="{{openShoppingMsg.pic}}" class="_img data-v-32c3980a"></image> <label class="_span data-v-32c3980a">></label>
+      </view>
+    </view>
+    <view class="_div data-v-32c3980a shoppingMsg">
+      <van-cell-group class="_van-cell-group data-v-32c3980a">
+        <van-field class="_van-field data-v-32c3980a shoppingName" bindchange="handleProxy" value="{{openShoppingMsg.storeName}}" placeholder="花店名称" data-eventid="{{'1'}}" data-comkey="{{$k}}"></van-field>
+        <van-field class="_van-field data-v-32c3980a shoppingDetail" bindchange="handleProxy" value="{{openShoppingMsg.detail}}" type="textarea" placeholder="给你的花店写一小段宣传语吧～" data-eventid="{{'2'}}" data-comkey="{{$k}}"></van-field>
+      </van-cell-group>
+    </view>
+    <view wx:if="{{openShopping === 'true'}}" class="_div data-v-32c3980a selectTemplate">
+      <image bindtap="handleProxy" src="/static/images/templateBtn.png" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_img data-v-32c3980a"></image>
+    </view>
+    <view wx:else class="_div data-v-32c3980a shoppingTemplate">
+      <view class="_div data-v-32c3980a shoppingTemplateTitle">选择模板</view>
+      <view class="_div data-v-32c3980a shoppingTemplateUrl" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">
+        <image src="{{openShoppingMsg.background}}" class="_img data-v-32c3980a"></image> <label class="_span data-v-32c3980a">></label>
+      </view>
+    </view>
+    <van-toast id="van-toast" class="_van-toast data-v-32c3980a"></van-toast>
+  </view>
+</template>

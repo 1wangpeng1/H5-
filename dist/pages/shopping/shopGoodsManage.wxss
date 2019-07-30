@@ -1,0 +1,39 @@
+@import "../../common/vendor.wxss";
+
+.indexTab.data-v-69aecad1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 102rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+}
+.indexTab ._img.data-v-69aecad1 {
+  width: 120rpx;
+  height: 42rpx;
+}
+.indexTab .tabOn.data-v-69aecad1 {
+  margin-top: 20rpx;
+}
+.indexTab .tabHeight.data-v-69aecad1 {
+  width: 120rpx;
+  height: 28rpx;
+}
+.indexTab .tabOneHot.data-v-69aecad1 {
+  width: 34rpx;
+  height: 38rpx;
+  padding-right: 8rpx;
+}
+.goodsListDiv.data-v-69aecad1 {
+  margin-top: 102rpx;
+}
+.goodsListDiv .loadingFinish.data-v-69aecad1 {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+}

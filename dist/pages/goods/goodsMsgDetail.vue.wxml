@@ -1,0 +1,71 @@
+<template name="565bde70">
+  <view class="_div data-v-8ac07770">
+    <view class="_div data-v-8ac07770 swiper-box">
+      <image class="_img data-v-8ac07770 peoShareGoods" bindtap="handleProxy" src="/static/images/peoShareShop.png" data-eventid="{{'0'}}" data-comkey="{{$k}}"></image>
+      <swiper class="_swiper data-v-8ac07770 goodsSwiper" autoplay="autoplay" interval="3000" bindchange="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+        <block wx:key="index" key="{{index}}" wx:for="{{productMsg.imgList}}" wx:for-index="index" wx:for-item="item">
+          <swiper-item class="_swiper-item data-v-8ac07770">
+            <image src="{{item}}" class="_image data-v-8ac07770 slide-image" width="355" height="150"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="_div data-v-8ac07770 dots">
+        <block wx:key="index" key="{{index}}" wx:for="{{productMsg.imgList}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-8ac07770 dot {{index === swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+    </view>
+    <view class="_div data-v-8ac07770 goodsMsg">
+      <view class="_div data-v-8ac07770 goodsName">{{productMsg.name}}</view>
+      <view class="_div data-v-8ac07770 goodsPrice">￥{{productMsg.price}}</view>
+      <view class="_div data-v-8ac07770 goodsDetail">{{productMsg.brief}}</view>
+      <view class="_div data-v-8ac07770 goodsAddress"><label class="_span data-v-8ac07770">发货</label>
+        <van-icon class="_van-icon data-v-8ac07770 icon" name="location-o"></van-icon><label class="_span data-v-8ac07770">{{productMsg.site}}</label>
+      </view>
+      <view class="_div data-v-8ac07770 goodsBuy">
+        <view class="_div data-v-8ac07770">配送：免运费</view>
+        <view bindtap="handleProxy" class="_div data-v-8ac07770 buyBtn" data-eventid="{{'2'}}" data-comkey="{{$k}}">购买</view>
+      </view>
+    </view>
+    <view class="_div data-v-8ac07770 goodsImg"></view>
+    <van-popup z-index="1000" show="{{goodsDialogShow}}" close-on-click-overlay="false" close="{{onClose}}" class="_van-popup data-v-8ac07770">
+      <view class="_div data-v-8ac07770 goodsDialogPopup">
+        <view class="_div data-v-8ac07770 goodsDetail">
+          <view class="_div data-v-8ac07770 goodsImg">
+            <image src="{{productMsg.imgList[0]}}" class="_img data-v-8ac07770"></image>
+          </view>
+          <view class="_div data-v-8ac07770 goodsDetailRight">
+            <view class="_div data-v-8ac07770 goodsTitle">{{productMsg.name}}</view>
+            <view class="_div data-v-8ac07770 goodswords">{{productMsg.brief}}</view>
+            <view class="_div data-v-8ac07770 goodsdPrice">￥{{productMsg.price}}</view>
+          </view>
+        </view>
+        <view class="_div data-v-8ac07770 goodsNum">
+          <view class="_div data-v-8ac07770 goodsNumChange">
+            <view class="_div data-v-8ac07770">购买数量</view>
+            <view class="_div data-v-8ac07770">
+              <van-stepper value="{{goodsBuyNum}}" bindchange="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-stepper data-v-8ac07770"></van-stepper>
+            </view>
+          </view>
+          <view class="_div data-v-8ac07770 goodsNumRecord">共{{goodsBuyNum}}件商品 小计：<label class="_span data-v-8ac07770">￥{{totlePrice}}</label></view>
+          <view class="_div data-v-8ac07770 goodsBuyBtn">
+            <view class="_div data-v-8ac07770 addCartBtn" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}">加入购物车</view>
+            <view class="_div data-v-8ac07770 buyBtn" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}">购买</view>
+          </view>
+        </view>
+        <image class="_img data-v-8ac07770 closeGoodsDialog" src="/static/images/wrong.png" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </van-popup>
+    <view class="_div data-v-8ac07770 popupBg" wx:if="{{sharePopup}}" bindtap="handleProxy" data-eventid="{{'10'}}" data-comkey="{{$k}}">
+      <painter customStyle="{{customStyle}}" catchtap="handleProxy" bindimgOK="handleProxy" palette="{{template}}" dirty="{{true}}" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_painter data-v-8ac07770"></painter>
+      <view class="_div data-v-8ac07770 functionBtn"><button data-name="shareBtn" plain="true" open-type="share" class="_button data-v-8ac07770 shareBtn" catchtap="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}">
+          <image src="/static/images/shareWx.png" class="_img data-v-8ac07770"></image> 微信好友
+        </button>
+        <view class="_div data-v-8ac07770 saveBtn" catchtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}">
+          <image src="/static/images/shareDown.png" class="_img data-v-8ac07770"></image> 保存图片
+        </view>
+      </view>
+    </view>
+    <van-toast id="van-toast" class="_van-toast data-v-8ac07770"></van-toast>
+  </view>
+</template>

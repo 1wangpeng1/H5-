@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/shopping/shopHome",
+    "pages/shopping/shopGoodsManage",
+    "pages/shopping/openShopping/editShopping",
+    "pages/shopping/openShopping/changeTemplate",
+    "pages/goods/goodsMsgDetail",
+    "pages/goods/sureOrder",
+    "pages/setShop",
+    "pages/myIfo",
+    "pages/myIfoPages/accountDetail",
+    "pages/myIfoPages/moneyCash",
+    "pages/myIfoPages/bankCard",
+    "pages/myIfoPages/editBankCard",
+    "pages/myIfoPages/addressList",
+    "pages/myIfoPages/editAddress",
+    "pages/myIfoPages/shopOrders",
+    "pages/myIfoPages/myOrders",
+    "pages/myIfoPages/myifoNews",
+    "pages/myIfoPages/newsDetail",
+    "pages/cardImg",
+    "pages/cardImgTwo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#AEB6AB",
+    "navigationBarTitleText": "云花店",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index",
+        "text": "首页",
+        "iconPath": "static/icon/icon_home.png",
+        "selectedIconPath": "static/icon/icon_home_HL.png"
+      },
+      {
+        "pagePath": "pages/setShop",
+        "text": "开店",
+        "iconPath": "static/icon/icon_mine.png",
+        "selectedIconPath": "static/icon/icon_mine_HL.png"
+      },
+      {
+        "pagePath": "pages/myIfo",
+        "text": "我的",
+        "iconPath": "static/icon/icon_mine.png",
+        "selectedIconPath": "static/icon/icon_mine_HL.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "subPackages": []
+}

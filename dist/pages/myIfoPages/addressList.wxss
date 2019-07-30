@@ -1,0 +1,66 @@
+@import "../../common/vendor.wxss";
+
+.addressDetailLi.data-v-ad78c9d8 {
+  display: flex;
+  align-items: center;
+  padding: 32rpx 0 0 24rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #333;
+}
+.addressDetailLi .addressDetailMsg.data-v-ad78c9d8 {
+  flex: 1;
+  padding-right: 54rpx;
+  box-sizing: border-box;
+}
+.addressDetailLi .addressDetailMsg .addressName.data-v-ad78c9d8 {
+  font-size: 32rpx;
+  padding-right: 24rpx;
+  line-height: 53rpx;
+}
+.addressDetailLi .addressDetailMsg .addressTel.data-v-ad78c9d8 {
+  color: #999;
+}
+.addressDetailLi .addressDetailMsg .addressDefault.data-v-ad78c9d8 {
+  display: inline-block;
+  width: 80rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  background: #c3d6df;
+  color: #37788A;
+  margin-right: 16rpx;
+}
+.addressDetailLi .addressDetailMsg .addressDetail.data-v-ad78c9d8 {
+  font-size: 28rpx;
+}
+.addressDetailLi .editAddress.data-v-ad78c9d8 {
+  width: 128rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-left: 2rpx solid #D8D8D8;
+  color: #999;
+  font-size: 26rpx;
+}
+.addAddress.data-v-ad78c9d8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 630rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  margin: 60rpx auto 30rpx;
+  background: #87967C;
+  -webkit-border-radius: 8rpx;
+  -moz-border-radius: 8rpx;
+  border-radius: 8rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+.addAddress .plus.data-v-ad78c9d8 {
+  font-size: 50rpx;
+  margin: 0 6rpx 10rpx 0;
+  font-weight: 100;
+}

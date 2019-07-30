@@ -1,0 +1,11 @@
+<template name="31f2c846">
+  <view class="_div data-v-70642680">
+    <view class="_div data-v-70642680 accountDetailLi" wx:key="index" key="{{index}}" wx:for="{{accountDetailMsg}}" wx:for-index="index" wx:for-item="item">
+      <view class="_div data-v-70642680 accountDetailMsg">
+        <view class="_div data-v-70642680">{{item.name}}</view>
+        <view class="_div data-v-70642680 {{item.type === 1 ? 'addMoney' : 'reduceMoney'}}">{{item.money}}</view>
+      </view>
+      <view class="_div data-v-70642680 accountDetailTime">今天 16：54</view>
+    </view>
+  </view>
+</template>
